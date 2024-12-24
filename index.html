@@ -8,9 +8,36 @@
 </head>
 <body>
   <h1>Conway's Game of Life</h1>
+  <div>
+    <label for="rows">Rows:</label>
+    <input type="number" id="rows" name="rows" min="1" value="20">
+    <label for="cols">Columns:</label>
+    <input type="number" id="cols" name="cols" min="1" value="20">
+  </div>
+  <div>
+    <label for="speed">Speed:</label>
+    <input type="range" id="speed" name="speed" min="100" max="1000" value="500" step="100">
+  </div>
+  <div>
+    <label for="patterns">Patterns:</label>
+    <select id="patterns" name="patterns">
+      <option value="pattern1">Pattern 1</option>
+      <option value="pattern2">Pattern 2</option>
+      <option value="pattern3">Pattern 3</option>
+    </select>
+  </div>
   <div id="game-board"></div>
   <button onclick="startGame()">Start</button>
   <button onclick="stopGame()">Stop</button>
+  <button onclick="resetBoard()">Reset</button>
+  <button onclick="pauseGame()">Pause</button>
+  <button onclick="saveGame()">Save</button>
+  <button onclick="loadGame()">Load</button>
+  <button onclick="randomizeBoard()">Randomize</button>
+  <div>
+    <p>Generation: <span id="generation-count">0</span></p>
+    <p>Speed: <span id="current-speed">500</span> ms</p>
+  </div>
   <script src="scripts.js"></script>
 </body>
 </html>
