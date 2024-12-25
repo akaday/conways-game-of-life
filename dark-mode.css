@@ -1,0 +1,21 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+#game-board {
+  background-color: #333;
+}
+
+.cell {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+.alive {
+  background-color: #fff;
+}
+
+.cell:hover {
+  background-color: #777;
+}

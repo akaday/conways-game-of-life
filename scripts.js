@@ -150,7 +150,23 @@ document.getElementById('patterns').addEventListener('change', (event) => {
     // Define pattern2
   } else if (pattern === 'pattern3') {
     // Define pattern3
+  } else if (pattern === 'pattern4') {
+    // Define pattern4
+    board[1][1].classList.add('alive');
+    board[1][2].classList.add('alive');
+    board[2][1].classList.add('alive');
+    board[2][2].classList.add('alive');
+  } else if (pattern === 'pattern5') {
+    // Define pattern5
+    board[3][3].classList.add('alive');
+    board[3][4].classList.add('alive');
+    board[4][3].classList.add('alive');
+    board[4][4].classList.add('alive');
   }
+});
+
+document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
 });
 
 document.addEventListener('DOMContentLoaded', createBoard);
